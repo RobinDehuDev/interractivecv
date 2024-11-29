@@ -17,12 +17,12 @@ type LinkProperties = LinkProps & {
 type Props = ButtonProperties | LinkProperties;
 
 function ButtonOrLink(props: Props) {
-  if (props.href !== undefined) return <Link {...props} />;
+  if (props.href !== undefined) return <Link {...props} />; // ActionLessButton
 
   return <button {...props} />;
 }
 
-export function ShapeLessButton({
+export function HiddenButton({
   className,
   innerClassName,
   children,
@@ -35,22 +35,21 @@ export function ShapeLessButton({
     <div className={cn("flex justify-center", className)}>
       <ButtonOrLink
         className={cn(
-          "border-[1px] border-white bg-none",
+          "bg-none",
           "cursor-pointer",
           "flex items-center justify-center",
-          "relative shadow",
+          "relative",
           //hover
           "transition",
-          "hover:border-2 hover:bg-white hover:bg-opacity-5 hover:shadow-md",
           //Focus
           "outline-none",
-          "focus:scale-[1.01] focus:border-2",
+          "focus:scale-[1.01]",
           //Active
-          "active:scale-95 active:border-opacity-95",
+          "active:scale-95",
           // Disabled
           "disabled:cursor-not-allowed disabled:opacity-30",
-          "disabled:active:scale-100 disabled:active:border-opacity-100",
-          "disabled:active:scale-100 disabled:active:border-opacity-100",
+          "disabled:active:scale-100",
+          "disabled:active:scale-100",
           innerClassName,
         )}
         {...props}
@@ -64,6 +63,48 @@ export function ShapeLessButton({
         )}
       </ButtonOrLink>
     </div>
+  );
+}
+
+export function BorderLessButton({
+  innerClassName,
+  ...props
+}: Parameters<typeof HiddenButton>[0]) {
+  return (
+    <HiddenButton
+      innerClassName={cn(
+        "shadow",
+        //hover
+        "hover:shadow-md",
+        "hover:bg-white hover:bg-opacity-5",
+        innerClassName,
+      )}
+      {...props}
+    />
+  );
+}
+
+export function ShapeLessButton({
+  innerClassName,
+  ...props
+}: Parameters<typeof BorderLessButton>[0]) {
+  return (
+    <BorderLessButton
+      innerClassName={cn(
+        "border-[1px] border-white",
+        //hover
+        "hover:border-2",
+        //Focus
+        "focus:border-2",
+        //Active
+        "active:border-opacity-95",
+        // Disabled
+        "disabled:active:border-opacity-100",
+        "disabled:active:border-opacity-100",
+        innerClassName,
+      )}
+      {...props}
+    />
   );
 }
 
@@ -93,7 +134,7 @@ export function NavigationButton({
 }: Parameters<typeof ShapeLessButton>[0]) {
   return (
     <ShapeLessButton
-      className={cn("absolute left-0 top-0 z-50 m-6", className)}
+      className={cn("m-4 h-12 w-12", className)}
       innerClassName={cn("rounded-full aspect-square w-12", innerClassName)}
       {...props}
     />

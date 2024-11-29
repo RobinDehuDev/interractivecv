@@ -10,7 +10,7 @@ export const EXPERIENCE = [
     longDescription:
       "D\u00e9veloppement complet d'une application en **Next.js** int\u00e9grant des composants clients et serveurs selon les besoins. Utilisation de **Prisma** pour la gestion des donn\u00e9es et de **tRPC** pour la communication entre le front et le back. En d\u00e9but de contrat, refactorisation et maintenance d'une API REST sous Express, avec intervention sur une application mobile en React Native.",
     tools:
-      "- **Next.js**\n- **Express**\n- **React Native**\n- **Prisma**\n- **tRPC**",
+      "- **Next.js**\n- **Express**\n- **React Native**\n- **Prisma**\n- **tRPC**\n- **PostgreSQL**",
     softSkills:
       "- Gestion de projet\n- Communication d'\u00e9quipe\n- Adaptabilit\u00e9",
   },
@@ -67,7 +67,7 @@ export const EXPERIENCE = [
       "Participation au d\u00e9veloppement de projets innovants au sein d\u2019un acc\u00e9l\u00e9rateur de startups.",
     longDescription:
       "Au sein d'Alacrit\u00e9, un acc\u00e9l\u00e9rateur de startups, j\u2019ai int\u00e9gr\u00e9 une \u00e9quipe de 4 personnes pour relever le d\u00e9fi de lancer une startup en un an. Mon parcours s\u2019est structur\u00e9 en deux phases principales :\n1. **Premi\u00e8re \u00e9quipe** : Renfort sur le projet qui est devenu **TRUSTeat**, une solution innovante de ma\u00eetrise de la cha\u00eene du froid gr\u00e2ce \u00e0 l\u2019IoT et des cam\u00e9ras intelligentes.\n2. **\u00c9quipe permanente** : D\u00e9veloppement d\u2019une plateforme visant \u00e0 rendre la publicit\u00e9 sur internet responsable en cr\u00e9ant des liens entre annonceurs, influenceurs, et associations engag\u00e9es.\n\nCes exp\u00e9riences ont impliqu\u00e9 le d\u00e9veloppement de solutions techniques en **Node.js**, en mettant l'accent sur la collaboration et l'innovation dans un environnement dynamique et exigeant.",
-    tools: "- **Node.js**\n- IoT et traitement d'image pour TRUSTeat",
+    tools: "- **React.js**\n- **Node.js**\n- **Express**",
     softSkills:
       "- Collaboration au sein de petites \u00e9quipes\n- Esprit entrepreneurial\n- Gestion de projet innovant",
   },
