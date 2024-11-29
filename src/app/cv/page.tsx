@@ -12,7 +12,7 @@ import { cn } from "~/lib/utils";
 
 export default function Experience() {
   const [selectedExperience, setExp] = useState(EXPERIENCE[0]!);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     return () => {
