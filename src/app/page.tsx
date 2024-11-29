@@ -5,7 +5,7 @@ import { env } from "~/env";
 
 export default async function Home() {
   const regex = /^(\+\d\d\d)(\d)(\d\d)(\d\d)(\d\d)/;
-  const match = env.PHONE.match(regex);
+  const match = regex.exec(env.PHONE);
   const formattedPhone = match
     ? `${match[1]} ${match[2]} ${match[3]} ${match[4]} ${match[5]}`
     : "";
