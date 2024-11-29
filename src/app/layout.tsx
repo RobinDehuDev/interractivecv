@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { Poppins } from "next/font/google";
 import { type Metadata } from "next";
 
-import { TRPCReactProvider } from "~/trpc/react";
+// import { TRPCReactProvider } from "~/trpc/react";
 import { cn } from "~/lib/utils";
 
 export const metadata: Metadata = {
@@ -20,15 +20,15 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${poppins.className}`}>
       <body>
-        <TRPCReactProvider>
-          <div
-            className={cn(
-              "h-full min-h-screen w-full bg-gradient-to-b from-[#4f57c5] to-[#15162c] text-white",
-            )}
-          >
-            {children}
-          </div>
-        </TRPCReactProvider>
+        {/* <TRPCReactProvider> */}
+        <div
+          className={cn(
+            "h-full min-h-screen w-full bg-gradient-to-b from-[#4f57c5] to-[#15162c] text-white",
+          )}
+        >
+          {children}
+        </div>
+        {/* </TRPCReactProvider> */}
       </body>
     </html>
   );
